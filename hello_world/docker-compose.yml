@@ -1,0 +1,13 @@
+version: "3"
+
+services: 
+    rust:
+        container_name: rust-tutorial
+        build: .
+        working_dir: /usr/src/app
+        volumes: 
+            - .:/usr/src/app:cached
+        stdin_open: true
+        tty: true
+        environment: 
+            - USER
